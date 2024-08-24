@@ -1,15 +1,23 @@
 # MyReads Project
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+MyReads: A Book Tracking App
+Main page: The main page shows three shelves for books. Each book is shown on the correct shelf, along with its title and all of its authors.
+You can change a book to another shelf by select on dropdown button or drag and drop it.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://reactjs.org/docs/create-a-new-react-app.html) to bootstrap the project.
+Search page: The search page has a search input field. Search results on the search page allow the user to select “Currently Reading”, “Want to Read”, or “Read” to place the book in a certain shelf
 
-## TL;DR
+# Preparation
 
-To get started developing right away:
+NodeJS: v20.16.0+
+https://nodejs.org/en/download
 
-- install all project dependencies with `npm install`
-- start the development server with `npm start`
+## Quick start
+
+Move to STARTER/ directory and excute below on CLI
+npm install
+npm start
+
+Finally open localhost:3000 on the browser.
 
 ## What You're Getting
 
@@ -22,6 +30,7 @@ To get started developing right away:
 │   ├── favicon.ico # React Icon, You may change if you wish.
 │   └── index.html # DO NOT MODIFY
 └── src
+    ├── components # All component of the app.
     ├── App.css # Styles for your app. Feel free to customize this as you desire.
     ├── App.js # This is the root of your app. Contains static HTML right now.
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
@@ -86,9 +95,3 @@ The backend API uses a fixed set of cached search results and is limited to a pa
 ## Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebook/create-react-app/blob/main/packages/cra-template/template/README.md).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
