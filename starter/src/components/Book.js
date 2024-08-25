@@ -5,6 +5,13 @@ const Book = ({ book, onShelfChange }) => {
     onShelfChange(book, event.target.value);
   };
 
+  const shelves = {
+    currentlyReading: "Currently Reading",
+    wantToRead: "Want to Read",
+    read: "Read",
+    none: "None",
+  };
+
   const handleDragStart = (e) => {
     e.dataTransfer.setData("bookId", book.id);
     e.dataTransfer.setData("bookShelf", book.shelf);
@@ -29,13 +36,14 @@ const Book = ({ book, onShelfChange }) => {
         />
         <div className="book-shelf-changer">
           <select value={book.shelf || "none"} onChange={handleChange}>
-            <option value="none" disabled>
+            <option value="move" disabled>
               Move to...
             </option>
-            <option value="currentlyReading">Currently Reading</option>
-            <option value="wantToRead">Want to Read</option>
-            <option value="read">Read</option>
-            <option value="none">None</option>
+            {Object.keys(shelves).map((shelfKey) => (
+              <option key={shelfKey} value={shelfKey}>
+                {shelves[shelfKey]}
+              </option>
+            ))}
           </select>
         </div>
       </div>
